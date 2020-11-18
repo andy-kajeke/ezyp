@@ -28,4 +28,17 @@ transactionsRoute.post('/deposit_payment', (req, res) => {
     })
 })
 
+///////////////////////////////update from pay-leo/////////////////////////////////////////////////////
+transactionsRoute.post('/payment/update', (req, res, body) => {
+
+    // Any request with an XML payload will be parsed
+    // and a JavaScript object produced on req.body
+    // corresponding to the request payload.
+    console.log(req.body);
+    var response = req.body.request;
+
+    res.status(200).end(); 
+}); 
+
+
 module.exports = transactionsRoute;
