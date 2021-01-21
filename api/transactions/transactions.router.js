@@ -17,7 +17,7 @@ transactionsRoute.post('/deposit_payment', (req, res) => {
         business_code: business_code
     };
 
-    fetch('http://vendors-gpaid.akhaninnovates.com:2020/webapi/transaction/deposit', {
+    fetch('https://vendors-gpaid.akhaninnovates.com/webapi/transaction/deposit', {
         method: 'POST',
         body: JSON.stringify(paymentData),
         headers: { 'Content-Type': 'application/json' }

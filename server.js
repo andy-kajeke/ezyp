@@ -20,5 +20,7 @@ app.listen(process.env.APP_PORT, () => {
 });
 
 const transactionRouter = require('./api/transactions/transactions.router');
+const mysmsRouter = require('./api/mysms/mysms.router');
 
 app.use('/webapi/transaction', transactionRouter);
+app.use('/webapi/sms', mysmsRouter);
